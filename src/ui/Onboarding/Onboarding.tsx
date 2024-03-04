@@ -9,6 +9,7 @@ import { Create } from './Create';
 import { Hardware } from './Hardware';
 import { PageLayout } from './shared/PageLayout/PageLayout';
 import { SessionExpired } from './shared/SessionExpired';
+import { HardwareCypherock } from './HardwareCypherock';
 
 function EmptyRoute() {
   return null;
@@ -54,6 +55,10 @@ export function Onboarding() {
         }
       />
       <Route path="/onboarding/hardware/*" element={<Hardware />} />
+      <Route
+        path="/onboarding/hardware-cypherock/*"
+        element={<HardwareCypherock />}
+      />
       <Route
         path="/onboarding/success"
         element={

@@ -139,10 +139,30 @@ const IMPORT_OPTIONS: ImportOptionConfig[] = [
     ),
     secondaryIconClassName: styles.hardwareIcon,
   },
+  {
+    title: 'Connect Cypherock',
+    to: '/onboarding/hardware-cypherock',
+    className: cn(styles.option, styles.hardware),
+    primaryImage: (
+      <img
+        src={HardwareImg}
+        alt="Connect Cypherock"
+        className={styles.hardwareImg}
+      />
+    ),
+    secondaryIcon: (
+      <HardWareIcon
+        className={styles.secondaryIcon}
+        style={{ width: 34, height: 63 }}
+      />
+    ),
+    secondaryIconClassName: styles.hardwareIcon,
+  },
 ];
 
 function ImportOptions() {
   const { isNarrowView } = useSizeStore();
+  console.log(IMPORT_OPTIONS);
   return (
     <Stack
       gap={16}

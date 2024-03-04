@@ -1,8 +1,5 @@
 module.exports = {
   manifest: {
-    '@zeriontech/hardware-wallet-connection': '../hardware-wallet-connection',
-    '@zeriontech/components': '../zeriontech/components',
-    '@zeriontech/transactions': '../zeriontech/transactions',
-    'defi-sdk': '../defi-sdk-js',
+    '@cypherock/web-evm-connector': '../cysync-new/submodules/sdk/packages/web-evm-connector',
   },
 };

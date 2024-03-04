@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "node scripts/verifyDotEnv.cjs",
     "start": "npm-run-all --parallel start:app type-check:watch",
-    "start:app": "parcel watch src/manifest.json src/ui/hardware-wallet/ledger.html --no-hmr --no-content-hash --no-autoinstall",
+    "start:app": "parcel watch src/manifest.json src/ui/hardware-wallet/ledger.html src/ui/hardware-wallet-cypherock/cypherock.html --no-hmr --no-content-hash --no-autoinstall",
     "build": "echo \"Please run 'npm run build:production' instead\" && exit 1",
     "build:production": "node scripts/build.js",
     "type-check": "tsc --noEmit",
@@ -88,6 +88,7 @@
     "*.{ts,tsx,css,md}": "prettier --write"
   },
   "dependencies": {
+    "@cypherock/web-evm-connector": "^0.0.0",
     "@download/blockies": "^1.0.3",
     "@json-rpc-tools/provider": "^1.7.6",
     "@json-rpc-tools/utils": "^1.7.6",
@@ -106,6 +107,7 @@
     "dayjs": "^1.11.9",
     "defi-sdk": "^0.1.0-alpha.75",
     "downshift": "^7.6.0",
+    "eip-712": "^1.0.0",
     "ethers": "^5.7.2",
     "events": "^3.3.0",
     "immer": "^10.0.2",
